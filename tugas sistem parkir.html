@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    TUGAS SISTEM PARKIR
+</head>
+<body>
+    <script>
+        const parkirMobil = 5000;
+        const parkirMotor = 2000;
+
+        function perhitunganParkir(tipeKendaraan, lamaParkir) {
+            if (tipeKendaraan === 'mobil') {
+                return parkirMobil * lamaParkir;
+            }
+            else if (tipeKendaraan === 'motor') {
+                return parkirMotor * lamaParkir
+            }
+        }
+
+        const tipeKendaraan = 'motor';
+        const lamaParkir = 4;
+
+        const hargaParkir = perhitunganParkir(tipeKendaraan, lamaParkir);
+        console.log(`harga parkir untuk ${tipeKendaraan} untuk ${lamaParkir} jam adalah Rp ${hargaParkir}.`);
+           
+    </script>
+</body>
+</html>
