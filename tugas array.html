@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>TUGAS ARRAY</h1>
+    <script>
+        const points = [13, 7, 12, 89, 9, 3, 1, 97];
+        points.sort(function(a, b){return a-b});
+
+        const angkaterendah = points[0]; //terendah 
+        console.log(`angka terendah adalah ${angkaterendah}`)
+
+        const angkatertinggi = points[points.length - 1]; //tertinggi
+        console.log(`angka tertinggi adalah ${angkatertinggi}`)
+
+        const angkaterendah2 = myArrayMin(points); // terendah 
+        function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+        }
+        console.log('angka terendah adalah', angkaterendah2)
+
+        const angkatertinggi2= myArrayMax(points); // tertinggi
+        function myArrayMax(arr) {
+        return Math.max.apply(null, arr); 
+        }
+        console.log('angka tertinggi adalah', angkatertinggi2)
+
+        // rerata
+
+        const sum = points.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        const average = sum / points.length;
+
+        console.log('Reratanya adalah', average);
+
+    </script>
+
+</body>
+</html>
+
